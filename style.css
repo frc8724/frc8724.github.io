@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+  color: white;
+  background-color: black;
+
+  padding: 10px;
+}
+
+.subtitle {
+  font-weight: normal;
+}
