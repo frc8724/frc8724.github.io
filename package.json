@@ -6,7 +6,7 @@
   "author": "Caleb Denio <cjdenio44@gmail.com>",
   "license": "MIT",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^10.4.1",
     "cssnano": "^5.0.14",
     "postcss": "^8.4.5",
