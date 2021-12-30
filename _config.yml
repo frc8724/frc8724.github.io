@@ -1,0 +1,15 @@
+exclude:
+  - package.json
+  - yarn.lock
+  - postcss.config.js
+  - tailwind.config.js
+  - README.md
+plugins:
+  - jekyll-postcss
+postcss:
+  cache: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
