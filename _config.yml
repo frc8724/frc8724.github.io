@@ -4,10 +4,7 @@ exclude:
   - postcss.config.js
   - tailwind.config.js
   - README.md
-plugins:
-  - jekyll-postcss
-postcss:
-  cache: false
+  - src/
 defaults:
   - scope:
       path: ""

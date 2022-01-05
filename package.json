@@ -6,9 +6,12 @@
   "author": "Caleb Denio <cjdenio44@gmail.com>",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "autoprefixer": "^10.4.1",
-    "cssnano": "^5.0.14",
-    "postcss": "^8.4.5"
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.0.10"
+  },
+  "scripts": {
+    "build": "tailwindcss -i src/style.css -o assets/css/style.css --minify",
+    "dev": "tailwindcss -i src/style.css -o assets/css/style.css --watch"
   }
 }
