@@ -4,6 +4,10 @@
 
 @layer components {
   .btn {
-    @apply px-5 py-2 bg-red-600 transition-colors font-bold rounded-sm font-heading;
+    @apply px-5 py-2 bg-red-600 transition-colors font-bold rounded-sm font-heading text-white hover:no-underline;
+  }
+
+  a {
+    @apply text-blue-400 hover:underline;
   }
 }
