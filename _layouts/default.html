@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/921bd8fdbd.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -16,6 +31,8 @@
     <script src="https://unpkg.com/@hotwired/turbo@7.1.0/dist/turbo.es2017-umd.js"></script>
   </head>
   <body class="bg-gray-900 text-white">
-    {{ content }}
+    {% include header.html %}
+    <div class="w-full max-w-5xl mx-auto">{{ content }}</div>
+    {% include footer.html %}
   </body>
 </html>

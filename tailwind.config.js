@@ -5,6 +5,12 @@ module.exports = {
     "./_posts/*.md",
     "./*.html",
   ],
-  theme: { extend: {} },
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: "Raleway",
+      },
+    },
+  },
   plugins: [],
 };

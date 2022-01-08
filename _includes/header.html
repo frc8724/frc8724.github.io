@@ -1,0 +1,29 @@
+<div class="flex justify-center items-center pt-4 mb-10">
+  <a href="/">
+    <div class="flex items-center gap-2 group">
+      <img
+        src="/assets/images/logo.png"
+        alt="Mayhem logo"
+        class="h-20 group-hover:scale-105 transition-transform"
+      />
+      <h1 class="text-3xl font-black font-heading">
+        Mayhem <span class="font-normal">Robotics</span>
+      </h1>
+    </div>
+  </a>
+
+  <div class="w-px bg-gray-600 h-12 mx-10"></div>
+
+  <div class="flex gap-4 items-center">
+    <a
+      class="btn{% if page.name != 'index.html' %} bg-gray-600{% endif %}"
+      href="/"
+      >Home</a
+    >
+    <a
+      class="btn{% if page.name != 'contact.html' %} bg-gray-600{% endif %}"
+      href="/contact"
+      >Contact Us</a
+    >
+  </div>
+</div>
