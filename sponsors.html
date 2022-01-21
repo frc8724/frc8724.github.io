@@ -2,21 +2,21 @@
 title: "Sponsors | Mayhem Robotics"
 ---
 
-<h1 class="text-3xl">Sponsors</h1>
+<h1 class="text-3xl mb-5 font-heading font-bold">Sponsors</h1>
 
 <div class="text-center">
-  <p class="text-lg my-5">
+  <p class="mb-5">
     We would like to thank all of our sponsors for supporting our team.
   </p>
 
   {% comment %} 👉 Edit sponsors in _data/sponsors.yml {% endcomment %}
-
+  
   {% for level in site.data.sponsors %}
     <h2 class="text-2xl font-heading font-bold mb-5">{{ level.title }}</h2>
 
     <ul class="mb-10">
       {% for sponsor in level.sponsors %}
-          <li>{{ sponsor.name }}</li>
+        <li>{{ sponsor.name }}</li>
       {% endfor %}
     </ul>
   {% endfor %}

@@ -5,6 +5,8 @@ exclude:
   - tailwind.config.js
   - README.md
   - src/
+  - bin/
+  - Procfile.dev
 defaults:
   - scope:
       path: ""

@@ -16,6 +16,7 @@ application.register(
 
     connect() {
       this.element.innerText = `${this.mailboxValue}@${this.domainValue}`;
+      this.element.href = `mailto:${this.mailboxValue}@${this.domainValue}`;
     }
   }
 );
