@@ -2,4 +2,4 @@
 . "$(dirname "$0")/_/husky.sh"
 
 yarn build
-git add source/assets/css/style.css
+git add assets/css/style.css
