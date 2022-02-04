@@ -1,3 +1,4 @@
+source: source/
 exclude:
   - package.json
   - yarn.lock

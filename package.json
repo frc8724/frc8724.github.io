@@ -12,8 +12,8 @@
     "husky": "^7.0.0"
   },
   "scripts": {
-    "build": "tailwindcss -i src/style.css -o assets/css/style.css --minify",
-    "dev": "tailwindcss -i src/style.css -o assets/css/style.css --watch",
+    "build": "tailwindcss -i src/style.css -o source/assets/css/style.css --minify",
+    "dev": "tailwindcss -i src/style.css -o source/assets/css/style.css --minify --watch",
     "prepare": "husky install"
   }
 }

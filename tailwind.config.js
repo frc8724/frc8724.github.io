@@ -1,9 +1,9 @@
 module.exports = {
   content: [
-    "./_includes/**/*.html",
-    "./_layouts/**/*.html",
-    "./_posts/*.md",
-    "./*.html",
+    "source/_includes/**/*.html",
+    "source/_layouts/**/*.html",
+    "source/_posts/*.md",
+    "source/*.html",
   ],
   theme: {
     extend: {
