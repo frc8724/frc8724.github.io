@@ -1,34 +1,30 @@
 <div class="flex justify-center items-center pt-4 mb-10">
   <a href="/" class="text-white hover:no-underline">
-    <div class="flex items-center gap-2 group">
-      <img
-        src="/assets/images/logo.png"
-        alt="Mayhem logo"
-        class="h-20 group-hover:scale-105 transition-transform"
-      />
-      <h1 class="text-3xl font-black font-heading">
+    <div class="flex items-center gap-2">
+      <img src="/assets/images/logo.png" alt="Mayhem logo" class="h-20" />
+      <h1 class="text-3xl font-black font-heading text-white">
         Mayhem <span class="font-normal">Robotics</span>
       </h1>
     </div>
   </a>
 
-  <div class="w-px bg-gray-600 h-12 mx-10"></div>
+  <div class="w-px bg-gray-600 h-12 ml-10"></div>
 
-  <div class="flex gap-4 items-center">
+  <div class="flex gap-4 items-center ml-10">
     <a
-      class="btn{% if page.name != 'index.html' %} bg-gray-600{% endif %}"
+      class="btn{% if page.name != 'index.html' %} bg-gray-700{% endif %}"
       href="/"
       >Home</a
     >
     <a
-      class="btn{% if page.name != 'contact.html' %} bg-gray-600{% endif %}"
+      class="btn{% if page.name != 'contact.html' %} bg-gray-700{% endif %}"
       href="/contact"
       >Contact Us</a
     >
     <a
-    class="btn{% if page.name != 'sponsors.html' %} bg-gray-600{% endif %}"
-    href="/sponsors"
-    >Our Sponsors</a
-  >
+      class="btn{% if page.name != 'sponsors.html' %} bg-gray-700{% endif %}"
+      href="/sponsors"
+      >Our Sponsors</a
+    >
   </div>
 </div>

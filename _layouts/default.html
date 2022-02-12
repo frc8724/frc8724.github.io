@@ -65,9 +65,11 @@
 
     <script src="/assets/js/main.js" type="module"></script>
   </head>
-  <body class="bg-gray-900 text-white">
+  <body class="bg-gray-900 text-gray-200">
     {% include header.html %}
-    <div class="w-full max-w-5xl mx-auto">{{ content }}</div>
+    <div class="px-10">
+      <div class="w-full max-w-5xl mx-auto">{{ content }}</div>
+    </div>
     {% include footer.html %}
   </body>
 </html>

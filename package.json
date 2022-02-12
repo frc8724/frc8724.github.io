@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "tailwindcss -i src/style.css -o assets/css/style.css --minify",
-    "dev": "tailwindcss -i src/style.css -o assets/css/style.css --watch",
+    "dev": "tailwindcss -i src/style.css -o assets/css/style.css --minify --watch",
     "prepare": "husky install"
   }
 }
