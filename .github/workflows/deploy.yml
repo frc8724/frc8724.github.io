@@ -13,16 +13,19 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
-      - run: |
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+          bundler-cache: true
+      - name: Install dependencies
+        run: |
           yarn install
-          yarn build
-      - uses: actions/cache@v2
+          bundle install
+      - run: yarn build
+      - run: bundle exec jekyll build
+      - run: cp CNAME _site/
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: gh-pages
+          branch: gh-pages
+          folder: _site
