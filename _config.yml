@@ -1,12 +1,6 @@
+source: source/
 exclude:
-  - package.json
-  - yarn.lock
-  - postcss.config.js
-  - tailwind.config.js
-  - README.md
-  - src/
-  - bin/
-  - Procfile.dev
+  - assets/src/
 defaults:
   - scope:
       path: ""
