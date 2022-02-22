@@ -1,9 +1,22 @@
 - title: Platinum Level
   sponsors:
     - name: Rockwell Automation
+      image: rockwell.png
     - name: FIRST In NH
+      image: firstnh.jpg
+    - name: Sullivan Construction
+      image: sullivanconstruction.png
+    - name: Argosy Foundation
+      image: argosy.png
 - title: Silver Level
   sponsors:
     - name: Burk Technology
+      image: burk.png
     - name: Sylvester Sheet Metal
+      image: sylvester.png
     - name: Polymershapes
+      image: polymershapes.png
+    - name: Metal Works
+      image: metalworks.png
+    - name: Fidelity Investments
+      image: fidelity.jpg
