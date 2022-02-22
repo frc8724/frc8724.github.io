@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - cooler-deploy-flow
 jobs:
   deploy:
     name: Deploy
