@@ -4,4 +4,4 @@ node_modules/
 
 .DS_Store
 
-assets/dist/
+/source/assets/dist/

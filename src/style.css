@@ -8,6 +8,6 @@
   }
 
   a {
-    @apply text-blue-400 hover:underline;
+    @apply text-red-500 hover:underline;
   }
 }

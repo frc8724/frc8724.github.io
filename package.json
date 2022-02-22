@@ -9,7 +9,7 @@
     "tailwindcss": "^3.0.10"
   },
   "scripts": {
-    "build": "tailwindcss -i src/style.css -o assets/dist/css/style.css --minify",
-    "dev": "tailwindcss -i src/style.css -o assets/dist/css/style.css --watch"
+    "build": "tailwindcss -i src/style.css -o source/assets/dist/css/style.css --minify",
+    "dev": "tailwindcss -i src/style.css -o source/assets/dist/css/style.css --watch"
   }
 }
