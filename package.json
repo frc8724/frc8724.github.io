@@ -1,19 +1,15 @@
 {
-  "name": "mayhem-site",
+  "name": "frc8724.github.io",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:frc8724/frc8724.github.io.git",
-  "author": "Caleb Denio <cjdenio44@gmail.com>",
+  "repository": "https://github.com/frc8724/frc8724.github.io",
   "license": "MIT",
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "tailwindcss": "^3.0.10",
-    "husky": "^7.0.0"
+    "tailwindcss": "^3.0.10"
   },
   "scripts": {
-    "build": "tailwindcss -i src/style.css -o assets/css/style.css --minify",
-    "dev": "tailwindcss -i src/style.css -o assets/css/style.css --minify --watch",
-    "prepare": "husky install"
+    "build": "tailwindcss -i src/style.css -o assets/dist/css/style.css --minify",
+    "dev": "tailwindcss -i src/style.css -o assets/dist/css/style.css --minify --watch"
   }
 }
