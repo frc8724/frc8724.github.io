@@ -1,23 +1,25 @@
 ---
 title: "Sponsors | Mayhem Robotics"
 layout: page
-heading: Sponsors
+heading: Our Sponsors
 ---
 
 <div class="text-center">
-  <p class="mb-5">
-    We would like to thank all of our sponsors for supporting our team.
-  </p>
-
   {% comment %} 👉 Edit sponsors in _data/sponsors.yml {% endcomment %}
   
   {% for level in site.data.sponsors %}
-    <h2 class="text-2xl font-heading font-bold mb-5">{{ level.title }}</h2>
+    <h2 class="text-4xl font-heading font-bold mb-6">{{ level.title }}</h2>
 
-    <ul class="mb-10">
+    <div class="mb-10 grid grid-cols-3 gap-5 text-black">
       {% for sponsor in level.sponsors %}
-        <li>{{ sponsor.name }}</li>
+        <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700" style="background-color: {{ sponsor.color | default: "white" }}" title="{{ sponsor.name }}">
+          {% if sponsor.image %}
+            <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+          {% else %}
+            {{ sponsor.name }}
+          {% endif %}
+        </div>
       {% endfor %}
-    </ul>
+      </div>
   {% endfor %}
 </div>

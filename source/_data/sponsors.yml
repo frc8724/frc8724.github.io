@@ -12,11 +12,14 @@
   sponsors:
     - name: Burk Technology
       image: burk.png
+      color: "#336699"
     - name: Sylvester Sheet Metal
       image: sylvester.png
     - name: Polymershapes
       image: polymershapes.png
     - name: Metal Works
       image: metalworks.png
-    - name: Fidelity Investments
-      image: fidelity.jpg
+    - name: Gilchrist
+      image: gilchrist.jpg
+    # - name: Fidelity Investments
+    #   image: fidelity.jpg
