@@ -10,6 +10,6 @@
   },
   "scripts": {
     "build": "tailwindcss -i src/style.css -o assets/dist/css/style.css --minify",
-    "dev": "tailwindcss -i src/style.css -o assets/dist/css/style.css --minify --watch"
+    "dev": "tailwindcss -i src/style.css -o assets/dist/css/style.css --watch"
   }
 }
