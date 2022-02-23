@@ -10,7 +10,7 @@ heading: Our Sponsors
   {% for level in site.data.sponsors %}
     <h2 class="text-3xl font-heading font-bold mb-6">{{ level.title }}</h2>
 
-    <div class="mb-10 grid grid-cols-3 gap-5 text-black">
+    <div class="mb-10 grid grid-cols-2 md:grid-cols-3 gap-5 text-black">
       {% for sponsor in level.sponsors %}
         {% if sponsor.url %}
           <a href="{{ sponsor.url }}" target="_blank" class="hover:scale-[1.02] transition-transform">
