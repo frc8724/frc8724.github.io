@@ -22,9 +22,10 @@ jobs:
           bundle install
       - run: yarn build
       - run: bundle exec jekyll build
-      - run: cp CNAME _site/
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages
           folder: _site
+          single-commit: true
+          clean: true
