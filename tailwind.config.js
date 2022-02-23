@@ -5,6 +5,9 @@ module.exports = {
       fontFamily: {
         heading: ["Raleway", "sans-serif"],
       },
+      screens: {
+        xs: "500px",
+      },
     },
   },
   plugins: [],

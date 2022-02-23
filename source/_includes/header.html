@@ -1,4 +1,6 @@
-<div class="flex justify-center items-center pt-4 mb-10 flex-col lg:flex-row">
+<div
+  class="flex justify-center items-center pt-4 mb-10 flex-col lg:flex-row px-10"
+>
   <a href="/" class="text-white hover:no-underline unstyled-link">
     <div class="flex items-center gap-2">
       <img src="/assets/images/logo.png" alt="Mayhem logo" class="h-20" />
@@ -19,12 +21,12 @@
     <a
       class="btn{% if page.name != 'contact.html' %} bg-gray-700{% endif %}"
       href="/contact"
-      >Contact Us</a
+      >Contact<span class="hidden xs:inline"> Us</span></a
     >
     <a
       class="btn{% if page.name != 'sponsors.html' %} bg-gray-700{% endif %}"
       href="/sponsors"
-      >Our Sponsors</a
+      ><span class="hidden xs:inline">Our </span>Sponsors</a
     >
   </div>
 </div>
