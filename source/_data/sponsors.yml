@@ -2,24 +2,32 @@
   sponsors:
     - name: Rockwell Automation
       image: rockwell.png
+      url: https://www.rockwellautomation.com/en-us.html
     - name: FIRST In NH
       image: firstnh.jpg
+      url: https://firstnh.org/main
     - name: Sullivan Construction
       image: sullivanconstruction.png
+      url: https://www.sullivanconstruction.com
     - name: Argosy Foundation
       image: argosy.png
+      url: https://www.argosyfnd.org
 - title: Silver Level
   sponsors:
     - name: Burk Technology
       image: burk.png
       color: "#336699"
+      url: https://www.burk.com
     - name: Sylvester Sheet Metal
       image: sylvester.png
+      url: https://ssmnh.com
     - name: Polymershapes
       image: polymershapes.png
+      url: https://www.polymershapes.com
     - name: Metal Works
       image: metalworks.png
-    - name: Gilchrist
+    - name: Gilchrist Metal Fabricating
       image: gilchrist.jpg
+      url: https://www.gmfco.com
     # - name: Fidelity Investments
     #   image: fidelity.jpg

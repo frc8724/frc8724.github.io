@@ -12,13 +12,25 @@ heading: Our Sponsors
 
     <div class="mb-10 grid grid-cols-3 gap-5 text-black">
       {% for sponsor in level.sponsors %}
-        <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700" style="background-color: {{ sponsor.color | default: "white" }}" title="{{ sponsor.name }}">
-          {% if sponsor.image %}
-            <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-          {% else %}
-            {{ sponsor.name }}
-          {% endif %}
-        </div>
+        {% if sponsor.url %}
+          <a href="{{ sponsor.url }}" target="_blank" class="hover:scale-[1.02] transition-transform">
+            <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700 h-full" style="background-color: {{ sponsor.color | default: "white" }}" title="{{ sponsor.name }}">
+              {% if sponsor.image %}
+                <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+              {% else %}
+                {{ sponsor.name }}
+              {% endif %}
+            </div>
+          </a>
+        {% else %}
+          <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700" style="background-color: {{ sponsor.color | default: "white" }}" title="{{ sponsor.name }}">
+            {% if sponsor.image %}
+              <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+            {% else %}
+              {{ sponsor.name }}
+            {% endif %}
+          </div>
+        {% endif %}
       {% endfor %}
       </div>
   {% endfor %}
