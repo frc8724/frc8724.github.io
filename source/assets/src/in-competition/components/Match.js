@@ -13,7 +13,7 @@ export default function Match({
   let classes = "bg-gray-900";
 
   return (
-    <div className={`flex rounded-md overflow-clip ${classes}`}>
+    <div className={`flex rounded-md ${classes}`}>
       <div className={`flex flex-col justify-center p-3`}>
         <div className="uppercase font-bold text-gray-400 text-xs">
           {competitionLevel}
@@ -23,14 +23,14 @@ export default function Match({
 
       <div className="flex flex-col items-stretch ml-1">
         <div
-          className={`px-3 bg-red-600 flex-1 flex items-center justify-center ${
+          className={`px-3 bg-red-600 flex-1 flex items-center justify-center rounded-tr-md ${
             redWon ? "font-bold" : ""
           }`}
         >
           {redScore}
         </div>
         <div
-          className={`px-3 bg-blue-600 flex-1 flex items-center justify-center ${
+          className={`px-3 bg-blue-600 flex-1 flex items-center justify-center rounded-br-md ${
             blueWon ? "font-bold" : ""
           }`}
         >
