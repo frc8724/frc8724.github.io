@@ -20,7 +20,7 @@ jobs:
         run: |
           yarn install
           bundle install
-      - run: yarn build
+      - run: yarn build && yarn build:css
       - run: bundle exec jekyll build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5

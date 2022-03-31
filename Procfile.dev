@@ -1,2 +1,3 @@
 jekyll: bundle exec jekyll serve
-css: yarn dev
+css: yarn build:css --watch
+js: yarn watch

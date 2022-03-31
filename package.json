@@ -4,12 +4,19 @@
   "repository": "https://github.com/frc8724/frc8724.github.io",
   "license": "MIT",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "socket.io-client": "^4.4.1",
+    "swr": "^1.2.2"
+  },
   "devDependencies": {
+    "esbuild": "^0.14.29",
     "tailwindcss": "^3.0.10"
   },
   "scripts": {
-    "build": "tailwindcss -i source/assets/src/style.css -o source/assets/dist/css/style.css --minify",
-    "dev": "tailwindcss -i source/assets/src/style.css -o source/assets/dist/css/style.css --watch"
+    "build": "esbuild source/assets/src/in-competition/main.js --bundle --outfile=source/assets/dist/js/in-competition.js --loader:.js=jsx --define:process.env.NODE_ENV=\\\"production\\\" --minify",
+    "watch": "esbuild source/assets/src/in-competition/main.js --bundle --outfile=source/assets/dist/js/in-competition.js --loader:.js=jsx --define:process.env.NODE_ENV=\\\"development\\\" --watch",
+    "build:css": "tailwindcss -i source/assets/src/style.css -o source/assets/dist/css/style.css --minify"
   }
 }
