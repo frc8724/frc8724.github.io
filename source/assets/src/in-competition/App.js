@@ -56,7 +56,7 @@ export default function App() {
           )}
         </div>
         <TwitchStream
-          className="flex-1"
+          className="flex-1 rounded-md overflow-clip"
           channel={event?.webcasts[0].channel}
           width="100%"
           height="100%"

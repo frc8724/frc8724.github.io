@@ -21,7 +21,7 @@ export default function Rankings({ teams }) {
             </a>
             <img
               src={`https://in-competition.mayhemrobotics.org/avatar/${team}`}
-              className="w-5 ml-2 rounded"
+              className="w-5 ml-2 rounded bg-blue-500"
             />
           </li>
         );
