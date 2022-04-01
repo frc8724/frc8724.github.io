@@ -12,7 +12,7 @@ export default function TwitchStream({ channel, height, width, className }) {
       channel,
       layout: "video",
     });
-  }, []);
+  }, [channel]);
 
   return <div className={className} ref={elementRef}></div>;
 }
