@@ -20,7 +20,7 @@ export default function Rankings({ teams }) {
               {team}
             </a>
             <img
-              src={`https://frcbot.deniosoftware.com/avatar/${team}`}
+              src={`https://in-competition.mayhemrobotics.org/avatar/${team}`}
               className="w-5 ml-2 rounded"
             />
           </li>
