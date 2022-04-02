@@ -1,19 +1,15 @@
-import React from "react";
+import React, { forwardRef, useMemo } from "react";
+import { DateTime } from "luxon";
 
-export default function Match({
-  competitionLevel,
-  matchNumber,
-  future,
-  redScore,
-  blueScore,
-}) {
-  const redWon = redScore > blueScore;
-  const blueWon = blueScore > redScore;
-
-  let classes = "bg-gray-900";
+function Match(
+  { competitionLevel, matchNumber, redScore, blueScore, played, scheduledTime },
+  ref
+) {
+  const redWon = useMemo(() => redScore > blueScore, [redScore, blueScore]);
+  const blueWon = useMemo(() => blueScore > redScore, [redScore, blueScore]);
 
   return (
-    <div className={`flex rounded-md ${classes}`}>
+    <div className="flex rounded-md bg-gray-900" ref={ref}>
       <div className={`flex flex-col justify-center p-3`}>
         <div className="uppercase font-bold text-gray-400 text-xs">
           {competitionLevel}
@@ -21,22 +17,34 @@ export default function Match({
         <div className="text-lg">{matchNumber}</div>
       </div>
 
-      <div className="flex flex-col items-stretch ml-1">
-        <div
-          className={`px-3 bg-red-600 flex-1 flex items-center justify-center rounded-tr-md ${
-            redWon ? "font-bold" : ""
-          }`}
-        >
-          {redScore}
+      {played ? (
+        <div className="flex flex-col items-stretch ml-1">
+          <div
+            className={`px-3 bg-red-600 flex-1 flex items-center justify-center rounded-tr-md ${
+              redWon ? "font-bold" : ""
+            }`}
+          >
+            {redScore}
+          </div>
+          <div
+            className={`px-3 bg-blue-600 flex-1 flex items-center justify-center rounded-br-md ${
+              blueWon ? "font-bold" : ""
+            }`}
+          >
+            {blueScore}
+          </div>
         </div>
-        <div
-          className={`px-3 bg-blue-600 flex-1 flex items-center justify-center rounded-br-md ${
-            blueWon ? "font-bold" : ""
-          }`}
-        >
-          {blueScore}
+      ) : (
+        <div className="border-l border-l-gray-600 text-gray-400 px-5 flex items-center justify-center text-xs">
+          <div className="[writing-mode:vertical-lr]">
+            {DateTime.fromSeconds(scheduledTime).toLocaleString(
+              DateTime.TIME_SIMPLE
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
+
+export default forwardRef(Match);

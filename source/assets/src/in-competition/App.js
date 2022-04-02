@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useMemo } from "react";
 import useSWR from "swr";
 import Match from "./components/Match";
+import MatchList from "./components/MatchList";
 import Rankings from "./components/Rankings";
 import TwitchStream from "./components/TwitchStream";
 
@@ -11,9 +12,11 @@ function Spinner() {
 }
 
 export default function App() {
-  const { data: event, error: eventError } = useSWR("/event");
-  const { data: matches } = useSWR("/matches");
-  const { data: rankings } = useSWR("/rankings");
+  const { data: event, error: eventError } = useSWR("/currentEvent");
+  const { data: matches } = useSWR(() => "/event/" + event.key + "/matches");
+  const { data: rankings } = useSWR(() => "/event/" + event.key + "/rankings");
+
+  const twitchChannel = useMemo(() => event?.webcasts[0].channel, [event]);
 
   if (eventError) return null;
 
@@ -52,39 +55,20 @@ export default function App() {
               />
             </>
           ) : (
-            <Spinner />
+            <div className="h-full flex items-center justify-center">
+              <Spinner />
+            </div>
           )}
         </div>
         <TwitchStream
           className="flex-1 rounded-md overflow-clip"
-          channel={event?.webcasts[0].channel}
+          channel={twitchChannel}
           width="100%"
           height="100%"
         />
       </div>
 
-      {matches && (
-        <div className="mt-7">
-          <h3 className="uppercase font-bold text-gray-400 text-xs mb-3">
-            Our Matches <i className="fas fa-arrow-right"></i>
-          </h3>
-
-          <div className="flex justify-start items-stretch space-x-3 overflow-auto">
-            {matches
-              .filter((m) => m.comp_level == "qm")
-              .sort((a, b) => a.time - b.time)
-              .map((match) => (
-                <Match
-                  competitionLevel="Qualification"
-                  matchNumber={match.match_number}
-                  key={match.key}
-                  redScore={match.alliances.red.score}
-                  blueScore={match.alliances.blue.score}
-                />
-              ))}
-          </div>
-        </div>
-      )}
+      {matches && <MatchList matches={matches} />}
     </div>
   );
 }
