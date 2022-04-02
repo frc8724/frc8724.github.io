@@ -12,7 +12,9 @@ function Spinner() {
 }
 
 export default function App() {
-  const { data: event, error: eventError } = useSWR("/currentEvent");
+  const { data: event, error: eventError } = useSWR("/currentEvent", {
+    refreshInterval: 0,
+  });
   const { data: matches } = useSWR(() => "/event/" + event.key + "/matches");
   const { data: rankings } = useSWR(() => "/event/" + event.key + "/rankings");
 

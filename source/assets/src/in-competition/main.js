@@ -27,7 +27,7 @@ document.addEventListener("turbo:load", () => {
 
   root = ReactDOM.createRoot(rootElement);
   root.render(
-    <SWRConfig value={{ fetcher, refreshInterval: 5000 }}>
+    <SWRConfig value={{ fetcher, refreshInterval: 10000 }}>
       <App />
     </SWRConfig>
   );
