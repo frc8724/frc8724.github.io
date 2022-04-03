@@ -1,8 +1,17 @@
 import React, { forwardRef, useMemo } from "react";
 import { DateTime } from "luxon";
+import { compLevelName } from "../util";
 
 function Match(
-  { competitionLevel, matchNumber, redScore, blueScore, played, scheduledTime },
+  {
+    competitionLevel,
+    matchNumber,
+    setNumber,
+    redScore,
+    blueScore,
+    played,
+    scheduledTime,
+  },
   ref
 ) {
   const redWon = useMemo(() => redScore > blueScore, [redScore, blueScore]);
@@ -10,11 +19,15 @@ function Match(
 
   return (
     <div className="flex rounded-md bg-gray-900" ref={ref}>
-      <div className={`flex flex-col justify-center p-3`}>
-        <div className="uppercase font-bold text-gray-400 text-xs">
-          {competitionLevel}
+      <div className="flex flex-col justify-center p-3 min-w-[120px]">
+        <div className="uppercase font-bold text-gray-400 text-xs whitespace-nowrap">
+          {compLevelName(competitionLevel)}
         </div>
-        <div className="text-lg">{matchNumber}</div>
+        <div className="text-lg">
+          {competitionLevel === "qf" || competitionLevel === "sf"
+            ? `${setNumber} - ${matchNumber}`
+            : matchNumber}
+        </div>
       </div>
 
       {played ? (
@@ -36,7 +49,10 @@ function Match(
         </div>
       ) : (
         <div className="border-l border-l-gray-600 text-gray-400 px-5 flex items-center justify-center text-xs">
-          <div className="[writing-mode:vertical-lr]">
+          <div
+            className="[writing-mode:vertical-lr]"
+            title="Scheduled match start time"
+          >
             {DateTime.fromSeconds(scheduledTime).toLocaleString(
               DateTime.TIME_SIMPLE
             )}
