@@ -21,7 +21,7 @@ function MatchListSection({ title, matches }) {
             redScore={match.alliances.red.score}
             blueScore={match.alliances.blue.score}
             played={!!match.actual_time}
-            scheduledTime={match.time}
+            scheduledTime={match.predicted_time || match.time}
           />
         ))}
       </div>
@@ -35,12 +35,12 @@ export default function MatchList({ matches }) {
 
     const sortedMatches = matches.sort((a, b) => a.time - b.time);
 
-    const upcomingMatches = sortedMatches.filter((m) => !m.actual_time);
+    const upcomingMatches = _.reject(sortedMatches, "actual_time");
 
     // If the entire event has been played, just display all matches
     if (upcomingMatches.length == 0) return [sortedMatches, {}];
 
-    const playedMatches = sortedMatches.filter((m) => m.actual_time);
+    const playedMatches = _.filter(sortedMatches, "actual_time");
 
     const now = DateTime.now();
 
@@ -60,7 +60,7 @@ export default function MatchList({ matches }) {
     <div className="mt-7 flex space-x-3 overflow-auto">
       <MatchListSection title="Recently Played" matches={playedMatches} />
       {Object.entries(days).map(([day, matches]) => (
-        <MatchListSection title={day} matches={matches} />
+        <MatchListSection key={day} title={day} matches={matches} />
       ))}
     </div>
   );
