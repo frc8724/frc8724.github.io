@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
-import { compLevelName } from "../util";
 import Match from "./Match";
 import _ from "lodash-es/collection";
+import isEmpty from "lodash-es/isEmpty";
 import { DateTime } from "luxon";
 
 function MatchListSection({ title, matches }) {
@@ -56,9 +56,20 @@ export default function MatchList({ matches }) {
     ];
   }, [matches]);
 
+  if (isEmpty(playedMatches) && isEmpty(days)) {
+    return (
+      <div className="mt-7 text-center uppercase font-bold text-gray-400 text-xs py-5">
+        No match information yet.
+      </div>
+    );
+  }
+
   return (
     <div className="mt-7 flex space-x-3 overflow-auto">
-      <MatchListSection title="Recently Played" matches={playedMatches} />
+      {playedMatches.length > 0 && (
+        <MatchListSection title="Recently Played" matches={playedMatches} />
+      )}
+
       {Object.entries(days).map(([day, matches]) => (
         <MatchListSection key={day} title={day} matches={matches} />
       ))}

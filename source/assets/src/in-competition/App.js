@@ -48,14 +48,20 @@ export default function App() {
       <div className="flex h-[27rem]">
         <div className="mr-7 rounded-md bg-gray-900 basis-48 overflow-auto py-3 px-2">
           {rankings ? (
-            <>
-              <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
-                Rankings
-              </h3>
-              <Rankings
-                teams={rankings.map((t) => t.team_key.replace("frc", ""))}
-              />
-            </>
+            rankings.length == 0 ? (
+              <div className="h-full flex items-center justify-center uppercase font-bold text-xs text-gray-400">
+                No rankings yet.
+              </div>
+            ) : (
+              <>
+                <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
+                  Rankings
+                </h3>
+                <Rankings
+                  teams={rankings.map((t) => t.team_key.replace("frc", ""))}
+                />
+              </>
+            )
           ) : (
             <div className="h-full flex items-center justify-center">
               <Spinner />
