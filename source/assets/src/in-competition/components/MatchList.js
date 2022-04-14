@@ -56,7 +56,7 @@ export default function MatchList({ matches }) {
     const now = DateTime.now();
 
     return [
-      playedMatches.slice(-2),
+      playedMatches.slice(-4),
       _.groupBy(upcomingMatches, (match) => {
         const matchTime = DateTime.fromSeconds(match.time);
 
