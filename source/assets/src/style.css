@@ -10,15 +10,6 @@
   a {
     @apply text-red-500 hover:underline;
   }
-
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
 }
 
 .turbo-progress-bar {
