@@ -47,6 +47,7 @@ export default function App() {
           <button
             className="px-3 py-[10px] rounded-full hover:bg-gray-700 transition-colors mr-3"
             onClick={() => toggle()}
+            title={isFullscreen ? "Exit full screen" : "Full screen"}
           >
             {isFullscreen ? (
               <i className="fas fa-fw fa-compress"></i>
