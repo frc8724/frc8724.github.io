@@ -18,7 +18,8 @@ export default function App() {
   const { data: matches } = useSWR(() => "/event/" + event.key + "/matches");
   const { data: rankings } = useSWR(() => "/event/" + event.key + "/rankings");
 
-  const twitchChannel = useMemo(() => event?.webcasts[0].channel, [event]);
+  // const twitchChannel = useMemo(() => event?.webcasts[0].channel, [event]);
+  const twitchChannel = "nefirst_red";
 
   const root = useRef(null);
   const [show, toggle] = useToggle(false);
