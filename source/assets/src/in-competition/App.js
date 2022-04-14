@@ -67,8 +67,8 @@ export default function App() {
         </div>
       </div>
 
-      <div className="flex flex-1">
-        <div className="mr-7 rounded-md bg-gray-900 basis-48 overflow-auto py-3 px-2 max-h-96">
+      <div className="flex flex-1 overflow-auto">
+        <div className="mr-7 rounded-md bg-gray-900 basis-48 overflow-auto py-3 px-2">
           {rankings ? (
             rankings.length == 0 ? (
               <div className="h-full flex items-center justify-center uppercase font-bold text-xs text-gray-400">

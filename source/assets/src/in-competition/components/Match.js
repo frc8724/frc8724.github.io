@@ -34,7 +34,7 @@ function Match(
             ((ourAlliance == "red" && redWon) ||
             (ourAlliance == "blue" && blueWon) ? (
               <div className="text-sm uppercase bg-red-700 text-red-200 px-2 rounded-sm ml-1">
-                🎉 Win
+                Win
               </div>
             ) : (
               <div className="text-sm uppercase bg-blue-700 text-blue-200 px-2 rounded-sm ml-1">
