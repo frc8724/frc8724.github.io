@@ -60,7 +60,7 @@ export default function MatchList({ matches }) {
       _.groupBy(upcomingMatches, (match) => {
         const matchTime = DateTime.fromSeconds(match.time);
 
-        if (matchTime.hasSame(now, "day")) return "Upcoming";
+        if (matchTime.hasSame(now, "day")) return "Upcoming Matches";
 
         return matchTime.weekdayLong;
       }),
