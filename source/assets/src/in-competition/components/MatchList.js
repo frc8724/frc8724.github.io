@@ -76,7 +76,7 @@ export default function MatchList({ matches }) {
   }
 
   return (
-    <div className="mt-7 flex space-x-3 overflow-auto">
+    <div className="mt-7 flex space-x-3 overflow-auto hide-scrollbar">
       {playedMatches.length > 0 && (
         <MatchListSection title="Recently Played" matches={playedMatches} />
       )}
