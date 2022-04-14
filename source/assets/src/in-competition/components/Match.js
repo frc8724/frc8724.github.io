@@ -19,7 +19,12 @@ function Match(
   const blueWon = useMemo(() => blueScore > redScore, [redScore, blueScore]);
 
   return (
-    <div className="flex rounded-md bg-gray-900" ref={ref}>
+    <div
+      className={`flex rounded-md bg-gray-900 border-t-2 ${
+        ourAlliance == "red" ? "border-t-red-600" : "border-t-blue-500"
+      }`}
+      ref={ref}
+    >
       <div className="flex flex-col justify-center p-3 min-w-[120px]">
         <div className="uppercase font-bold text-gray-400 text-xs whitespace-nowrap">
           {compLevelName(competitionLevel)}
