@@ -1,21 +1,15 @@
 <div class="flex justify-center items-center pt-4 mb-10 flex-col lg:flex-row">
   <a href="/" class="text-white hover:no-underline unstyled-link">
-    <div
-      class="flex items-center gap-2"
-      data-controller="fish"
-      data-action="mouseenter->fish#hover mouseleave->fish#unhover"
-    >
+    <div class="flex items-center gap-2 group">
       <img
         src="https://emojicdn.elk.sh/🐟"
-        alt="Mayhem logo"
-        class="h-20 hidden"
-        data-fish-target="fish"
+        alt="Jorge the Fish"
+        class="h-20 hidden group-hover:block"
       />
       <img
         src="/assets/images/logo.png"
         alt="Mayhem logo"
-        class="h-20"
-        data-fish-target="mayhem"
+        class="h-20 block group-hover:hidden"
       />
       <h1 class="text-3xl font-black font-heading text-white">
         Mayhem <span class="font-normal">Robotics</span>

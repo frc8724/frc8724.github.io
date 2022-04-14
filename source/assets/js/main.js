@@ -20,20 +20,3 @@ application.register(
     }
   }
 );
-
-application.register(
-  "fish",
-  class extends Controller {
-    static targets = ["fish", "mayhem"];
-
-    hover() {
-      this.fishTarget.style.display = "block";
-      this.mayhemTarget.style.display = "none";
-    }
-
-    unhover() {
-      this.fishTarget.style.display = "none";
-      this.mayhemTarget.style.display = "block";
-    }
-  }
-);
