@@ -5,10 +5,14 @@ import { SWRConfig } from "swr";
 import App from "./App";
 
 async function fetcher(url) {
+  // const response = await fetch(
+  //   (process.env.NODE_ENV === "production"
+  //     ? "https://in-competition.mayhemrobotics.org"
+  //     : "http://localhost:3000") + url
+  // );
+
   const response = await fetch(
-    (process.env.NODE_ENV === "production"
-      ? "https://in-competition.mayhemrobotics.org"
-      : "http://localhost:3000") + url
+    "https://in-competition.mayhemrobotics.org" + url
   );
 
   if (!response.ok) {
