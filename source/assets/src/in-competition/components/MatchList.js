@@ -12,18 +12,29 @@ function MatchListSection({ title, matches }) {
       </h3>
 
       <div className="flex justify-start items-stretch space-x-3">
-        {matches.map((match) => (
-          <Match
-            key={match.key}
-            competitionLevel={match.comp_level}
-            matchNumber={match.match_number}
-            setNumber={match.set_number}
-            redScore={match.alliances.red.score}
-            blueScore={match.alliances.blue.score}
-            played={!!match.actual_time}
-            scheduledTime={match.predicted_time || match.time}
-          />
-        ))}
+        {matches.map((match) => {
+          let ourAlliance = "";
+
+          if (match.alliances.red.team_keys.includes("frc8724")) {
+            ourAlliance = "red";
+          } else if (match.alliances.blue.team_keys.includes("frc8724")) {
+            ourAlliance = "blue";
+          }
+
+          return (
+            <Match
+              key={match.key}
+              competitionLevel={match.comp_level}
+              matchNumber={match.match_number}
+              setNumber={match.set_number}
+              redScore={match.alliances.red.score}
+              blueScore={match.alliances.blue.score}
+              played={!!match.actual_time}
+              scheduledTime={match.predicted_time || match.time}
+              ourAlliance={ourAlliance}
+            />
+          );
+        })}
       </div>
     </div>
   );
