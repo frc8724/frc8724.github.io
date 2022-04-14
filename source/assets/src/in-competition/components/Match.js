@@ -62,9 +62,9 @@ function Match(
           </div>
         </div>
       ) : (
-        <div className="border-l border-l-gray-600 text-gray-400 px-5 flex items-center justify-center text-xs">
+        <div className="border-l border-l-gray-600 text-gray-400 flex items-center justify-center text-xs">
           <div
-            className="[writing-mode:vertical-lr]"
+            className="rotate-90 whitespace-nowrap"
             title="Predicted match start time"
           >
             {DateTime.fromSeconds(scheduledTime).toLocaleString(
