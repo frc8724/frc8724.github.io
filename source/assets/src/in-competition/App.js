@@ -1,9 +1,9 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useRef } from "react";
 import useSWR from "swr";
-import Match from "./components/Match";
 import MatchList from "./components/MatchList";
 import Rankings from "./components/Rankings";
 import TwitchStream from "./components/TwitchStream";
+import { useFullscreen, useToggle } from "react-use";
 
 function Spinner() {
   return (
@@ -20,6 +20,12 @@ export default function App() {
 
   const twitchChannel = useMemo(() => event?.webcasts[0].channel, [event]);
 
+  const root = useRef(null);
+  const [show, toggle] = useToggle(false);
+  const isFullscreen = useFullscreen(root, show, {
+    onClose: () => toggle(false),
+  });
+
   if (eventError) return null;
 
   if (!event) {
@@ -31,9 +37,24 @@ export default function App() {
   }
 
   return (
-    <div className="bg-gray-800 rounded-md flex flex-col items-stretch justify-center mb-5 p-7">
+    <div
+      className="bg-gray-800 rounded-md flex flex-col items-stretch justify-center mb-5 p-7 h-[40rem]"
+      ref={root}
+    >
       <div className="flex items-center justify-between mb-7">
-        <div>{event?.name}</div>
+        <div className="flex items-center">
+          <button
+            className="px-3 py-[10px] rounded-full hover:bg-gray-700 transition-colors mr-3"
+            onClick={() => toggle()}
+          >
+            {isFullscreen ? (
+              <i className="fas fa-fw fa-compress"></i>
+            ) : (
+              <i className="fas fa-fw fa-expand"></i>
+            )}
+          </button>
+          <div>{event?.name}</div>
+        </div>
         <div>
           <a
             href={`https://www.thebluealliance.com/event/${event.key}`}
@@ -45,7 +66,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="flex h-[27rem]">
+      <div className="flex flex-1">
         <div className="mr-7 rounded-md bg-gray-900 basis-48 overflow-auto py-3 px-2">
           {rankings ? (
             rankings.length == 0 ? (
