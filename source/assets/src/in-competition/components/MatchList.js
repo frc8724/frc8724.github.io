@@ -67,17 +67,16 @@ export default function MatchList({ matches }) {
     ];
   }, [matches]);
 
-  // if (isEmpty(playedMatches) && isEmpty(days)) {
-  //   return (
-  //     <div className="mt-7 text-center uppercase font-bold text-gray-400 text-xs py-5">
-  //       No match information yet.
-  //     </div>
-  //   );
-  // }
+  if (isEmpty(playedMatches) && isEmpty(days)) {
+    return (
+      <div className="mt-7 text-center uppercase font-bold text-gray-400 text-xs py-5">
+        No match information yet.
+      </div>
+    );
+  }
 
   return (
     <div className="mt-7 flex space-x-3 overflow-auto">
-      <Match competitionLevel="qm" matchNumber={1} scheduledTime={0} />
       {playedMatches.length > 0 && (
         <MatchListSection title="Recently Played" matches={playedMatches} />
       )}
