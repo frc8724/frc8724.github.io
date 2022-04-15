@@ -56,7 +56,7 @@ export default function MatchList({ matches }) {
     const now = DateTime.now();
 
     return [
-      playedMatches.slice(-4),
+      playedMatches.slice(-2),
       _.groupBy(upcomingMatches, (match) => {
         const matchTime = DateTime.fromSeconds(match.time);
 
@@ -69,14 +69,14 @@ export default function MatchList({ matches }) {
 
   if (isEmpty(playedMatches) && isEmpty(days)) {
     return (
-      <div className="mt-7 text-center uppercase font-bold text-gray-400 text-xs py-5">
+      <div className="text-center uppercase font-bold text-gray-400 text-xs py-5">
         No match information yet.
       </div>
     );
   }
 
   return (
-    <div className="mt-7 flex space-x-3 overflow-auto hide-scrollbar shrink-0">
+    <div className="flex space-x-3 shrink-0">
       {playedMatches.length > 0 && (
         <MatchListSection title="Recently Played" matches={playedMatches} />
       )}

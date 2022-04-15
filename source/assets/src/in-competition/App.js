@@ -20,15 +20,15 @@ export default function App() {
 
   const twitchChannel = useMemo(() => event?.webcasts[0].channel, [event]);
 
-  const root = useRef(null);
+  const ref = useRef(null);
   const [show, toggle] = useToggle(false);
-  const isFullscreen = useFullscreen(root, show, {
+  const isFullscreen = useFullscreen(ref, show, {
     onClose: () => toggle(false),
   });
 
   if (eventError) return null;
 
-  if (!event) {
+  if (!event || !matches || !rankings) {
     return (
       <div className="bg-gray-800 rounded-md flex flex-col items-center justify-center mb-5 p-7">
         <Spinner />
@@ -38,10 +38,10 @@ export default function App() {
 
   return (
     <div
-      className="bg-gray-800 rounded-md flex flex-col items-stretch justify-center mb-5 p-7 h-[40rem]"
-      ref={root}
+      className="bg-gray-800 rounded-md mb-5 p-7 h-[42rem] grid grid-rows-[auto_1fr_auto] grid-cols-[12rem_1fr] gap-7"
+      ref={ref}
     >
-      <div className="flex items-center justify-between mb-7">
+      <div className="col-span-2 flex items-center justify-between">
         <div className="flex items-center">
           <button
             className="px-3 py-[10px] rounded-full hover:bg-gray-700 transition-colors mr-3"
@@ -66,39 +66,21 @@ export default function App() {
           </a>
         </div>
       </div>
-
-      <div className="flex flex-1 overflow-auto">
-        <div className="mr-7 rounded-md bg-gray-900 basis-48 overflow-auto py-3 px-2">
-          {rankings ? (
-            rankings.length == 0 ? (
-              <div className="h-full flex items-center justify-center uppercase font-bold text-xs text-gray-400">
-                No rankings yet.
-              </div>
-            ) : (
-              <>
-                <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
-                  Rankings
-                </h3>
-                <Rankings
-                  teams={rankings.map((t) => t.team_key.replace("frc", ""))}
-                />
-              </>
-            )
-          ) : (
-            <div className="h-full flex items-center justify-center">
-              <Spinner />
-            </div>
-          )}
-        </div>
-        <TwitchStream
-          className="flex-1 rounded-md overflow-clip"
-          channel={twitchChannel}
-          width="100%"
-          height="100%"
-        />
+      <div className="bg-gray-900 rounded-md overflow-auto py-3 px-2">
+        <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
+          Rankings
+        </h3>
+        <Rankings teams={rankings.map((t) => t.team_key.replace("frc", ""))} />
       </div>
-
-      {matches && <MatchList matches={matches} />}
+      <TwitchStream
+        className="rounded-md overflow-clip"
+        channel={twitchChannel}
+        width="100%"
+        height="100%"
+      />
+      <div className="col-span-2 overflow-auto hide-scrollbar">
+        {matches && <MatchList matches={matches} />}
+      </div>
     </div>
   );
 }
