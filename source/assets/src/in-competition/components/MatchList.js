@@ -44,7 +44,13 @@ export default function MatchList({ matches }) {
   const [playedMatches, days] = useMemo(() => {
     if (matches === undefined) return undefined;
 
-    const sortedMatches = matches.sort((a, b) => a.time - b.time);
+    const sortedMatches = matches
+      .sort((a, b) => a.time - b.time)
+      .filter(
+        (match) =>
+          match.alliances.red.team_keys.includes("frc8724") ||
+          match.alliances.blue.team_keys.includes("frc8724")
+      );
 
     const upcomingMatches = _.reject(sortedMatches, "actual_time");
 
