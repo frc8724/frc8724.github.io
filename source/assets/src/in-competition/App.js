@@ -38,7 +38,9 @@ export default function App() {
 
   return (
     <div
-      className="bg-gray-800 rounded-md mb-5 md:p-7 p-5 md:h-[42rem] grid md:grid-rows-[auto_1fr_auto] grid-rows-[auto_auto_auto_20rem] grid-cols-[12rem_1fr] gap-7"
+      className={`bg-gray-800 ${
+        !isFullscreen ? "rounded-md" : ""
+      } mb-5 md:p-7 p-5 md:h-[42rem] grid md:grid-rows-[auto_1fr_auto] grid-rows-[auto_auto_auto_20rem] grid-cols-[12rem_1fr] gap-7`}
       ref={ref}
     >
       <div className="col-span-2 flex items-center justify-between gap-4">
@@ -56,14 +58,16 @@ export default function App() {
           </button>
           <div>{event?.name}</div>
         </div>
-        <a
-          href={`https://www.thebluealliance.com/event/${event.key}`}
-          target="_blank"
-          className="hidden md:block"
-        >
-          See this event on The Blue Alliance{" "}
-          <i className="fas fa-external-link-alt"></i>
-        </a>
+        {!isFullscreen && (
+          <a
+            href={`https://www.thebluealliance.com/event/${event.key}`}
+            target="_blank"
+            className="hidden md:block"
+          >
+            See this event on The Blue Alliance{" "}
+            <i className="fas fa-external-link-alt"></i>
+          </a>
+        )}
       </div>
       <div className="bg-gray-900 rounded-md overflow-auto py-3 px-2 row-start-4 col-span-2 md:row-start-2 md:col-span-1">
         <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
