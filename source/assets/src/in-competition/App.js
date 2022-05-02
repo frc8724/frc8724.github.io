@@ -1,5 +1,6 @@
 import React, { useMemo, useRef } from "react";
 import useSWR from "swr";
+import useSWRImmutable from "swr/immutable";
 import MatchList from "./components/MatchList";
 import Rankings from "./components/Rankings";
 import TwitchStream from "./components/TwitchStream";
@@ -12,9 +13,7 @@ function Spinner() {
 }
 
 export default function App() {
-  const { data: event, error: eventError } = useSWR("/currentEvent", {
-    refreshInterval: 0,
-  });
+  const { data: event } = useSWRImmutable("/currentEvent");
   const { data: matches } = useSWR(() => "/event/" + event.key + "/matches");
   const { data: rankings } = useSWR(() => "/event/" + event.key + "/rankings");
 
@@ -26,15 +25,7 @@ export default function App() {
     onClose: () => toggle(false),
   });
 
-  if (eventError) return null;
-
-  if (!event || !matches || !rankings) {
-    return (
-      <div className="bg-gray-800 rounded-md flex flex-col items-center justify-center mb-5 p-7">
-        <Spinner />
-      </div>
-    );
-  }
+  if (!event || !matches || !rankings) return null;
 
   return (
     <div
