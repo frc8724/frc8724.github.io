@@ -9,6 +9,6 @@ export function compLevelName(compLevel) {
     case "f":
       return "Final";
     default:
-      return "Unknown match type";
+      return "Match";
   }
 }

@@ -42,7 +42,7 @@ function Match(
                 Win
               </div>
             ) : (
-              <div className="text-sm uppercase bg-blue-700 text-blue-200 px-2 rounded-sm ml-2">
+              <div className="text-sm uppercase bg-gray-700 text-gray-300 px-2 rounded-sm ml-2">
                 Loss
               </div>
             ))}
