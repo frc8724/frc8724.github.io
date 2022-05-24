@@ -8,9 +8,9 @@ heading: Our Sponsors
   {% comment %} 👉 Edit sponsors in _data/sponsors.yml {% endcomment %}
   
   {% for level in site.data.sponsors %}
-    <h2 class="text-3xl font-heading font-bold mb-6">{{ level.title }}</h2>
+    <h2 class="text-2xl font-heading font-bold mb-7">{{ level.title }}</h2>
 
-    <div class="mb-10 grid grid-cols-2 md:grid-cols-3 gap-5 text-black">
+    <div class="mb-10 last:mb-0 grid grid-cols-2 md:grid-cols-3 gap-5 text-black">
       {% for sponsor in level.sponsors %}
         {% if sponsor.url %}
           <a href="{{ sponsor.url }}" target="_blank" class="hover:scale-[1.02] transition-transform">
