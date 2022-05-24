@@ -13,7 +13,7 @@ heading: Our Sponsors
     <div class="mb-10 last:mb-0 grid grid-cols-2 md:grid-cols-3 gap-5 text-black">
       {% for sponsor in level.sponsors %}
         {% if sponsor.url %}
-          <a href="{{ sponsor.url }}" target="_blank" class="hover:scale-[1.02] transition-transform">
+          <a href="{{ sponsor.url }}" target="_blank" class="hover:scale-[1.02] hover:no-underline transition-transform">
             <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700 h-full" style="background-color: {{ sponsor.color | default: "white" }}" title="{{ sponsor.name }}">
               {% if sponsor.image %}
                 <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
