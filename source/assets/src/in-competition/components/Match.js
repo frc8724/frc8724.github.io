@@ -29,7 +29,7 @@ function Match(
         <div className="uppercase font-bold text-gray-400 text-xs whitespace-nowrap">
           {compLevelName(competitionLevel)}
         </div>
-        <div className="text-lg flex items-center justify-between">
+        <div className="text-lg flex items-center justify-between whitespace-nowrap">
           {competitionLevel === "qf" || competitionLevel === "sf"
             ? `${setNumber} - ${matchNumber}`
             : matchNumber}
@@ -38,11 +38,11 @@ function Match(
             ourAlliance &&
             ((ourAlliance == "red" && redWon) ||
             (ourAlliance == "blue" && blueWon) ? (
-              <div className="text-sm uppercase bg-red-700 text-red-200 px-2 rounded-sm ml-1">
+              <div className="text-sm uppercase bg-red-700 text-red-200 px-2 rounded-sm ml-2">
                 Win
               </div>
             ) : (
-              <div className="text-sm uppercase bg-blue-700 text-blue-200 px-2 rounded-sm ml-1">
+              <div className="text-sm uppercase bg-blue-700 text-blue-200 px-2 rounded-sm ml-2">
                 Loss
               </div>
             ))}
