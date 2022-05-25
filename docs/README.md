@@ -66,7 +66,7 @@ yarn build:css --watch
 
 - The code for the Sponsors page is in `source/_data/sponsors.yml`
 
-- The navbar is in `source/includes/header.html`
+- The navbar is in `source/_includes/header.html`
 
 - Images are in `source/assets/images/`
 
