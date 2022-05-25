@@ -42,26 +42,22 @@ Then, run
 
 and visit http://localhost:4000!
 
-<details>
-    <summary>
-        ⚠️ <code>./bin/dev</code> DOESN'T WORK ON WINDOWS!!! Click here for Windows instructions
-    </summary>
-    <p>
+<details><summary>⚠️ <code>./bin/dev</code> DOESN'T WORK ON WINDOWS!!! Click here for Windows instructions</summary>
+<p>
 
-        _Your warrantee will be voided by using Windows_
+_Your warrantee will be voided by using Windows_
 
-        Open 2 terminals (or Command Prompts), and run these 2 commands:
+Open 2 terminals (or Command Prompts), and run these 2 commands:
 
-        ```
-        bundle exec jekyll serve
-        ```
+```
+bundle exec jekyll serve
+```
 
-        ```
-        yarn build:css --watch
-        ```
+```
+yarn build:css --watch
+```
 
-    </p>
-
+</p>
 </details>
 
 ## Where things are
