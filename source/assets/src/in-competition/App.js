@@ -60,12 +60,22 @@ export default function App() {
           </a>
         )}
       </div>
-      <div className="bg-gray-900 rounded-md overflow-auto py-3 px-2 row-start-4 col-span-2 md:row-start-2 md:col-span-1">
-        <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
-          Rankings
-        </h3>
-        <Rankings teams={rankings.map((t) => t.team_key.replace("frc", ""))} />
-      </div>
+      {rankings.length > 0 ? (
+        <div className="bg-gray-900 rounded-md overflow-auto py-3 px-2 row-start-4 col-span-2 md:row-start-2 md:col-span-1">
+          <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
+            Rankings
+          </h3>
+          <Rankings
+            teams={rankings.map((t) => t.team_key.replace("frc", ""))}
+          />
+        </div>
+      ) : (
+        <div className="bg-gray-900 rounded-md overflow-auto py-3 px-2 row-start-4 col-span-2 md:row-start-2 md:col-span-1 flex items-center justify-center">
+          <h3 className="uppercase font-bold text-gray-400 text-xs mb-2 px-2">
+            No rankings yet.
+          </h3>
+        </div>
+      )}
       <TwitchStream
         className="rounded-md overflow-clip col-span-2 md:col-span-1 aspect-video md:aspect-auto"
         channel={twitchChannel}
