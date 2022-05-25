@@ -7,7 +7,7 @@
 - [Architecture](#architecture)
 - [Running locally](#running-locally)
 - [Where things are](#where-things-are)
-- [How "Mayhem In Competition" works](#how-"mayhem-in-competition"-works)
+- [How "Mayhem In Competition" works](#how-mayhem-in-competition-works)
 
 ## Architecture
 
@@ -61,7 +61,7 @@ and visit http://localhost:4000!
 
 </details>
 
-# Where things are
+## Where things are
 
 - Pages are HTML files in `source/`
 
