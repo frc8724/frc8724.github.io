@@ -45,7 +45,7 @@ and visit http://localhost:4000!
 <details><summary>⚠️ <code>./bin/dev</code> DOESN'T WORK ON WINDOWS!!! Click here for Windows instructions</summary>
 <p>
 
-_Your warrantee will be voided by using Windows_
+_Your warranty will be voided by using Windows_
 
 Open 2 terminals (or Command Prompts), and run these 2 commands:
 
