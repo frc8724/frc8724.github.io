@@ -1,16 +1,15 @@
 import React, { useRef, useEffect } from "react";
 
-const { Embed } = window.Twitch;
+const { Player } = window.Twitch;
 
 export default function TwitchStream({ channel, height, width, className }) {
   const elementRef = useRef(null);
 
   useEffect(() => {
-    new Embed(elementRef.current, {
+    new Player(elementRef.current, {
       width,
       height,
       channel,
-      layout: "video",
     });
   }, [channel]);
 
