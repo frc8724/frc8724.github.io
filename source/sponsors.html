@@ -6,32 +6,34 @@ heading: Our Sponsors
 
 <div class="text-center">
   {% comment %} 👉 Edit sponsors in _data/sponsors.yml {% endcomment %}
-  
-  {% for level in site.data.sponsors %}
-    <h2 class="text-2xl font-heading font-bold mb-7">{{ level.title }}</h2>
 
-    <div class="mb-10 last:mb-0 grid grid-cols-2 md:grid-cols-3 gap-5 text-black">
-      {% for sponsor in level.sponsors %}
-        {% if sponsor.url %}
-          <a href="{{ sponsor.url }}" target="_blank" class="hover:scale-[1.02] hover:no-underline transition-transform">
-            <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700 h-full" style="background-color: {{ sponsor.color | default: "white" }}" title="{{ sponsor.name }}">
-              {% if sponsor.image %}
-                <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-              {% else %}
-                {{ sponsor.name }}
-              {% endif %}
-            </div>
-          </a>
+  {% for level in site.data.sponsors %}
+  <h2 class="text-2xl font-heading font-bold mb-7">{{ level.title }}</h2>
+
+  <div class="mb-10 last:mb-0 grid grid-cols-2 md:grid-cols-3 gap-5 text-black">
+    {% for sponsor in level.sponsors %}
+    {% if sponsor.url %}
+    <a href="{{ sponsor.url }}" target="_blank" class="hover:scale-[1.02] hover:no-underline transition-transform">
+      <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700 h-full"
+        style="background-color: {{ sponsor.color | default: " white" }}" title="{{ sponsor.name }}">
+        {% if sponsor.image %}
+        <img class="sponsor-img" src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
         {% else %}
-          <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700" style="background-color: {{ sponsor.color | default: "white" }}" title="{{ sponsor.name }}">
-            {% if sponsor.image %}
-              <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-            {% else %}
-              {{ sponsor.name }}
-            {% endif %}
-          </div>
+        {{ sponsor.name }}
         {% endif %}
-      {% endfor %}
+      </div>
+    </a>
+    {% else %}
+    <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700"
+      style="background-color: {{ sponsor.color | default: " white" }}" title="{{ sponsor.name }}">
+      {% if sponsor.image %}
+      <img src="/assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+      {% else %}
+      {{ sponsor.name }}
+      {% endif %}
     </div>
+    {% endif %}
+    {% endfor %}
+  </div>
   {% endfor %}
 </div>
