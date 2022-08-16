@@ -19,6 +19,10 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .sponsor-img {
+    height: 115px;
+  }
 }
 
 .turbo-progress-bar {

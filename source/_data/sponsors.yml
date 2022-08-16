@@ -29,5 +29,8 @@
     - name: Gilchrist Metal Fabricating
       image: gilchrist.jpg
       url: https://www.gmfco.com
+    - name: Bedford Men's Club
+      image: BedfordMensClub.png
+      url: https://bedfordmensclub.clubexpress.com/content.aspx
     # - name: Fidelity Investments
     #   image: fidelity.jpg
