@@ -32,5 +32,8 @@
     - name: Bedford Men's Club
       image: BedfordMensClub.png
       url: https://bedfordmensclub.clubexpress.com/content.aspx
+    - name: Service Credit Union
+      image: servicecu.png
+      url: http://www.servicecu.org/
     # - name: Fidelity Investments
     #   image: fidelity.jpg
