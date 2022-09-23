@@ -3,7 +3,7 @@
     - name: Rockwell Automation
       image: rockwell.png
       url: https://www.rockwellautomation.com/en-us.html
-    - name: FIRST In NH
+    - name: FIRST NH
       image: firstnh.jpg
       url: https://firstnh.org/main
     - name: Sullivan Construction
@@ -12,6 +12,9 @@
     - name: Argosy Foundation
       image: argosy.png
       url: https://www.argosyfnd.org
+    - name: U.S. Department of Defense
+      image: deptofdef.png
+      url: https://www.defense.gov/
 - title: Silver Level
   sponsors:
     - name: Burk Technology
@@ -35,5 +38,16 @@
     - name: Service Credit Union
       image: servicecu.png
       url: http://www.servicecu.org/
-    # - name: Fidelity Investments
-    #   image: fidelity.jpg
+- title: Bronze Level
+  sponsors:
+    - name: Temco Tool Company Inc.
+      image: temco.png
+      url: https://www.temcotool.com/
+- title: Thank You!
+  sponsors:
+    - name: Marc Phillips Auto
+      image: marcphillips.jpg
+      url: http://www.marcphillipsauto.com/
+    - name: Harbor Freight Tools
+      image: harborfreight.png
+      url: https://www.harborfreight.com/
