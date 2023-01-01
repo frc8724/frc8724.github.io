@@ -15,12 +15,13 @@
     - name: U.S. Department of Defense
       image: deptofdef.png
       url: https://www.defense.gov/
+- title: Gold Level
+  sponsors:
+    - name: Optics 1
+      image: optics1.png
+      url: https://www.optics1.com/
 - title: Silver Level
   sponsors:
-    - name: Burk Technology
-      image: burk.png
-      color: "#336699"
-      url: https://www.burk.com
     - name: Sylvester Sheet Metal
       image: sylvester.png
       url: https://ssmnh.com
@@ -38,6 +39,9 @@
     - name: Service Credit Union
       image: servicecu.png
       url: http://www.servicecu.org/
+    - name: Ron's Toy Shop
+      image: ronstoyshop.png
+      url: https://www.ronstoyshop.com/
 - title: Bronze Level
   sponsors:
     - name: Temco Tool Company Inc.
