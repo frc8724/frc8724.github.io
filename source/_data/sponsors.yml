@@ -18,8 +18,8 @@
 - title: Gold Level
   sponsors:
     - name: Optics 1
-    - image: optics1.png
-    - url: https://www.optics1.com/
+      image: optics1.png
+      url: https://www.optics1.com/
 - title: Silver Level
   sponsors:
     - name: Sylvester Sheet Metal
