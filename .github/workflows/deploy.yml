@@ -21,6 +21,7 @@ jobs:
           yarn install
           bundle install
       - run: yarn build && yarn build:css
+      - run: bundle add webrick
       - run: bundle exec jekyll build --trace 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
