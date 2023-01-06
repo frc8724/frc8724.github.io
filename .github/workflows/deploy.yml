@@ -14,14 +14,13 @@ jobs:
           node-version: "16"
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
+          ruby-version: 2.7
           bundler-cache: true
       - name: Install dependencies
         run: |
           yarn install
           bundle install
       - run: yarn build && yarn build:css
-      - run: bundle add webrick
       - run: bundle exec jekyll build --trace 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
