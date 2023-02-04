@@ -9,9 +9,9 @@
     - name: Sullivan Construction
       image: sullivanconstruction.png
       url: https://www.sullivanconstruction.com
-    - name: Argosy Foundation
-      image: argosy.png
-      url: https://www.argosyfnd.org
+    - name: Wire Belt Company of America
+      image: wirebelt.png
+      url: https://wirebelt.com/
     - name: U.S. Department of Defense
       image: deptofdef.png
       url: https://www.defense.gov/
@@ -30,9 +30,6 @@
       url: https://www.polymershapes.com
     - name: Metal Works
       image: metalworks.png
-    - name: Gilchrist Metal Fabricating
-      image: gilchrist.jpg
-      url: https://www.gmfco.com
     - name: Bedford Men's Club
       image: BedfordMensClub.png
       url: https://bedfordmensclub.clubexpress.com/content.aspx
@@ -55,3 +52,9 @@
     - name: Harbor Freight Tools
       image: harborfreight.png
       url: https://www.harborfreight.com/
+    - name: Chris & Christina Mitchell
+    - name: Britton & Kevin Albiston
+    - name: Marlene, Mark, Tony, & Evan Calkins
+    - name: Anonymous Corporate Donor
+
+
