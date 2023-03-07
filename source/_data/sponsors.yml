@@ -3,12 +3,6 @@
     - name: Rockwell Automation
       image: rockwell.png
       url: https://www.rockwellautomation.com/en-us.html
-    - name: FIRST NH
-      image: firstnh.jpg
-      url: https://firstnh.org/main
-    - name: Sullivan Construction
-      image: sullivanconstruction.png
-      url: https://www.sullivanconstruction.com
     - name: Wire Belt Company of America
       image: wirebelt.png
       url: https://wirebelt.com/
@@ -17,9 +11,11 @@
       url: https://www.defense.gov/
 - title: Gold Level
   sponsors:
-    - name: Optics 1
-      image: optics1.png
-      url: https://www.optics1.com/
+    - name: FIRST NH
+      image: firstnh.jpg
+      url: https://firstnh.org/main
+    - name: Haggarty Family Trust
+      image: ethel.png
 - title: Silver Level
   sponsors:
     - name: Sylvester Sheet Metal
@@ -33,12 +29,17 @@
     - name: Bedford Men's Club
       image: BedfordMensClub.png
       url: https://bedfordmensclub.clubexpress.com/content.aspx
+    - name: Anonymous Corporate Donor
+    - name: Henryk Chylinski
     - name: Service Credit Union
       image: servicecu.png
       url: http://www.servicecu.org/
     - name: Ron's Toy Shop
       image: ronstoyshop.png
       url: https://www.ronstoyshop.com/
+    - name: Optics 1
+      image: optics1.png
+      url: https://www.optics1.com/
 - title: Bronze Level
   sponsors:
     - name: Temco Tool Company Inc.
@@ -46,6 +47,9 @@
       url: https://www.temcotool.com/
 - title: Thank You!
   sponsors:
+    - name: Sullivan Construction
+      image: sullivanconstruction.png
+      url: https://www.sullivanconstruction.com
     - name: Marc Phillips Auto
       image: marcphillips.jpg
       url: http://www.marcphillipsauto.com/
@@ -55,6 +59,8 @@
     - name: Chris & Christina Mitchell
     - name: Britton & Kevin Albiston
     - name: Marlene, Mark, Tony, & Evan Calkins
-    - name: Anonymous Corporate Donor
+    - name: AmazonSmile
+      image: amazonsmile.png
+    
 
 
