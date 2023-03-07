@@ -3,25 +3,35 @@
     - name: Rockwell Automation
       image: rockwell.png
       url: https://www.rockwellautomation.com/en-us.html
-    - name: FIRST NH
-      image: firstnh.jpg
-      url: https://firstnh.org/main
-    - name: Sullivan Construction
-      image: sullivanconstruction.png
-      url: https://www.sullivanconstruction.com
-    - name: Wire Belt Company of America
-      image: wirebelt.png
-      url: https://wirebelt.com/
     - name: U.S. Department of Defense
       image: deptofdef.png
       url: https://www.defense.gov/
+    - name: Wire Belt Company of America
+      image: wirebelt.png
+      url: https://wirebelt.com/
 - title: Gold Level
   sponsors:
+    - name: FIRST NH
+      image: firstnh.jpg
+      url: https://firstnh.org/main
+    - name: Haggarty Family Trust
+      image: ethel.png
+- title: Silver Level
+  sponsors:
+    - name: Bedford Men's Club
+      image: BedfordMensClub.png
+      url: https://bedfordmensclub.clubexpress.com/content.aspx
+    - name: Service Credit Union
+      image: servicecu.png
+      url: http://www.servicecu.org/
+    - name: Anonymous Corporate Donor
+    - name: Henryk Chylinski
     - name: Optics 1
       image: optics1.png
       url: https://www.optics1.com/
-- title: Silver Level
-  sponsors:
+    - name: Ron's Toy Shop
+      image: ronstoyshop.png
+      url: https://www.ronstoyshop.com/
     - name: Sylvester Sheet Metal
       image: sylvester.png
       url: https://ssmnh.com
@@ -30,15 +40,8 @@
       url: https://www.polymershapes.com
     - name: Metal Works
       image: metalworks.png
-    - name: Bedford Men's Club
-      image: BedfordMensClub.png
-      url: https://bedfordmensclub.clubexpress.com/content.aspx
-    - name: Service Credit Union
-      image: servicecu.png
-      url: http://www.servicecu.org/
-    - name: Ron's Toy Shop
-      image: ronstoyshop.png
-      url: https://www.ronstoyshop.com/
+
+
 - title: Bronze Level
   sponsors:
     - name: Temco Tool Company Inc.
@@ -46,6 +49,9 @@
       url: https://www.temcotool.com/
 - title: Thank You!
   sponsors:
+    - name: Sullivan Construction
+      image: sullivanconstruction.png
+      url: https://www.sullivanconstruction.com
     - name: Marc Phillips Auto
       image: marcphillips.jpg
       url: http://www.marcphillipsauto.com/
@@ -55,6 +61,8 @@
     - name: Chris & Christina Mitchell
     - name: Britton & Kevin Albiston
     - name: Marlene, Mark, Tony, & Evan Calkins
-    - name: Anonymous Corporate Donor
+    - name: AmazonSmile
+      image: amazonsmile.png
+
 
 
