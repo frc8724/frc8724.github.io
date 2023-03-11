@@ -3,28 +3,24 @@
     - name: Rockwell Automation
       image: rockwell.png
       url: https://www.rockwellautomation.com/en-us.html
-<<<<<<< HEAD
-=======
-    - name: Wire Belt Company of America
-      image: wirebelt.png
-      url: https://wirebelt.com/
->>>>>>> fe6fb7624027181393d0494d761f4afd4606c15a
     - name: U.S. Department of Defense
       image: deptofdef.png
       url: https://www.defense.gov/
+    - name: Gene Haas Foundation
+      image: haas.png
+      url: https://ghaasfoundation.org/content/ghf/en/home.html
+- title: Gold Level
+  sponsors:
+    - name: Haggarty Family Trust
+      image: ethel.png
     - name: Wire Belt Company of America
       image: wirebelt.png
       url: https://wirebelt.com/
-- title: Gold Level
-  sponsors:
     - name: FIRST NH
       image: firstnh.jpg
       url: https://firstnh.org/main
-    - name: Haggarty Family Trust
-      image: ethel.png
 - title: Silver Level
   sponsors:
-<<<<<<< HEAD
     - name: Bedford Men's Club
       image: BedfordMensClub.png
       url: https://bedfordmensclub.clubexpress.com/content.aspx
@@ -32,15 +28,18 @@
       image: servicecu.png
       url: http://www.servicecu.org/
     - name: Anonymous Corporate Donor
+      image: anonymous.png
     - name: Henryk Chylinski
+      image: dz.png
     - name: Optics 1
       image: optics1.png
       url: https://www.optics1.com/
     - name: Ron's Toy Shop
       image: ronstoyshop.png
       url: https://www.ronstoyshop.com/
-=======
->>>>>>> fe6fb7624027181393d0494d761f4afd4606c15a
+    - name: BOSCH Community Fund
+      image: bosch.jpg
+      url: https://www.bosch.us/our-company/social-responsibility/
     - name: Sylvester Sheet Metal
       image: sylvester.png
       url: https://ssmnh.com
@@ -49,30 +48,14 @@
       url: https://www.polymershapes.com
     - name: Metal Works
       image: metalworks.png
-<<<<<<< HEAD
-
-
-=======
-    - name: Bedford Men's Club
-      image: BedfordMensClub.png
-      url: https://bedfordmensclub.clubexpress.com/content.aspx
-    - name: Anonymous Corporate Donor
-    - name: Henryk Chylinski
-    - name: Service Credit Union
-      image: servicecu.png
-      url: http://www.servicecu.org/
-    - name: Ron's Toy Shop
-      image: ronstoyshop.png
-      url: https://www.ronstoyshop.com/
-    - name: Optics 1
-      image: optics1.png
-      url: https://www.optics1.com/
->>>>>>> fe6fb7624027181393d0494d761f4afd4606c15a
 - title: Bronze Level
   sponsors:
     - name: Temco Tool Company Inc.
       image: temco.png
       url: https://www.temcotool.com/
+    - name: Pfizer
+      image: pfizer.png
+      url: https://www.pfizer.com/
 - title: Thank You!
   sponsors:
     - name: Sullivan Construction
@@ -84,15 +67,13 @@
     - name: Harbor Freight Tools
       image: harborfreight.png
       url: https://www.harborfreight.com/
-    - name: Chris & Christina Mitchell
+    - name: Chris & Kristina Mitchell
+      image: mitchell.png
     - name: Britton & Kevin Albiston
+      image: albiston.png
     - name: Marlene, Mark, Tony, & Evan Calkins
+      image: calkins.png
     - name: AmazonSmile
       image: amazonsmile.png
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> fe6fb7624027181393d0494d761f4afd4606c15a
 
 
