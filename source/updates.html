@@ -1,0 +1,39 @@
+---
+title: "Sponsors | Mayhem Robotics"
+layout: page
+heading: Our Sponsors
+---
+
+<div class="text-center">
+  {% comment %} 👉 Edit updates in _data/updates.yml {% endcomment %}
+
+  {% for level in site.data.updates %}
+  <h2 class="text-2xl font-heading font-bold mb-7">{{ level.title }}</h2>
+
+  <div class="mb-10 last:mb-0 grid grid-cols-2 md:grid-cols-3 gap-5 text-black">
+    {% for updates in level.updates %}
+    {% if updates.url %}
+    <a href="{{ updates.url }}" target="_blank" class="hover:scale-[1.02] hover:no-underline transition-transform">
+      <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700 h-full"
+        style="background-color: {{ updates.color | default: " white" }}" title="{{ updates.name }}">
+        {% if updates.image %}
+        <img class="updates-img" src="/assets/images/updates/{{ updates.image }}" alt="{{ updates.name }}" />
+        {% else %}
+        {{ updates.name }}
+        {% endif %}
+      </div>
+    </a>
+    {% else %}
+    <div class="flex items-center justify-center rounded-md p-5 font-bold text-2xl text-gray-700"
+      style="background-color: {{ updates.color | default: " white" }}" title="{{ updates.name }}">
+      {% if updates.image %}
+      <img src="/assets/images/updates/{{ updates.image }}" alt="{{ updates.name }}" />
+      {% else %}
+      {{ updates.name }}
+      {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
