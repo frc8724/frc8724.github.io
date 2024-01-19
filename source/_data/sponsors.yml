@@ -1,45 +1,29 @@
 - title: Platinum Level
   sponsors:
-    - name: Rockwell Automation
-      image: rockwell.png
-      url: https://www.rockwellautomation.com/en-us.html
+    - name: Bedford Men's Club
+      image: BedfordMensClub.png
+      url: https://bedfordmensclub.clubexpress.com/content.aspx
     - name: U.S. Department of Defense
       image: deptofdef.png
       url: https://www.defense.gov/
     - name: Gene Haas Foundation
       image: haas1.png
       url: https://ghaasfoundation.org/content/ghf/en/home.html
-- title: Gold Level
-  sponsors:
-    - name: Haggarty Family Trust
-      image: ethel.png
     - name: Wire Belt Company of America
       image: wirebelt.png
       url: https://wirebelt.com/
-    - name: FIRST NH
-      image: firstnh.jpg
-      url: https://firstnh.org/main
+#- title: Gold Level
+#  sponsors:   
 - title: Silver Level
   sponsors:
-    - name: Bedford Men's Club
-      image: BedfordMensClub.png
-      url: https://bedfordmensclub.clubexpress.com/content.aspx
     - name: Service Credit Union
       image: servicecu.png
       url: http://www.servicecu.org/
-    - name: Anonymous Corporate Donor
-      image: anonymous.png
     - name: Henryk Chylinski
       image: dz.png
     - name: Optics 1
       image: optics1.png
       url: https://www.optics1.com/
-    - name: Ron's Toy Shop
-      image: ronstoyshop.png
-      url: https://www.ronstoyshop.com/
-    - name: BOSCH Community Fund
-      image: bosch.jpg
-      url: https://www.bosch.us/our-company/social-responsibility/
     - name: Sylvester Sheet Metal
       image: sylvester.png
       url: https://ssmnh.com
@@ -50,9 +34,6 @@
       image: metalworks.png
 - title: Bronze Level
   sponsors:
-    - name: Temco Tool Company Inc.
-      image: temco.png
-      url: https://www.temcotool.com/
     - name: Pfizer
       image: pfizer.png
       url: https://www.pfizer.com/
@@ -64,16 +45,6 @@
     - name: Marc Phillips Auto
       image: marcphillips.jpg
       url: http://www.marcphillipsauto.com/
-    - name: Harbor Freight Tools
-      image: harborfreight.png
-      url: https://www.harborfreight.com/
-    - name: Chris & Kristina Mitchell
-      image: mitchell.png
-    - name: Britton & Kevin Albiston
-      image: albiston.png
-    - name: Marlene, Mark, Tony, & Evan Calkins
-      image: calkins.png
-    - name: AmazonSmile
-      image: amazonsmile.png
+
 
 
