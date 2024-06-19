@@ -19,6 +19,8 @@ I didn't use GitHub Pages's native Jekyll support. 😱 This was mostly because 
 
 ## Running locally
 
+If you are running Windows: stop, install Ubuntu 22.04 under WSL, and install ruby (with rbenv), nvm, node >=20.
+
 First, install the following:
 
 - [Ruby](https://www.ruby-lang.org/en/downloads) and [Bundler](https://bundler.io/#getting-started)
