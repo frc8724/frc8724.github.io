@@ -1,11 +1,11 @@
 - title: Platinum Level
   sponsors:
-    - name: Bedford Men's Club
-      image: BedfordMensClub.png
-      url: https://bedfordmensclub.clubexpress.com/content.aspx
-    - name: U.S. Department of Defense
-      image: deptofdef.png
-      url: https://www.defense.gov/
+    - name: BAE
+      image: baesystems.png
+      url: https://www.baesystems.com/
+    - name: TE Connectivity
+      image: teconnectivity.jpg
+      url: https://te.com/en/home.html
     - name: Gene Haas Foundation
       image: haas1.png
       url: https://ghaasfoundation.org/content/ghf/en/home.html
@@ -32,19 +32,20 @@
       url: https://www.polymershapes.com
     - name: Metal Works
       image: metalworks.png
-- title: Bronze Level
-  sponsors:
     - name: Pfizer
       image: pfizer.png
       url: https://www.pfizer.com/
+- title: Bronze Level
+  sponsors:
+    - name: Commonwealth Souvenirs
+      image: commonwealthsouv.png
+      url: https://www.commonwealthsouvenirs.com/
 - title: Thank You!
   sponsors:
     - name: Sullivan Construction
       image: sullivanconstruction.png
       url: https://www.sullivanconstruction.com
-    - name: Marc Phillips Auto
-      image: marcphillips.jpg
-      url: http://www.marcphillipsauto.com/
+
 
 
 
